@@ -1,0 +1,26 @@
+{
+  "name": "ah-server-api-doc",
+  "version": "3.0.60",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.build.json --outDir dist",
+    "prepublish": "npm run ci && npm run build"
+  },
+  "peerDependencies": {
+    "ah-server": ">=5.2.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "ah-server": "^5.2.4",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "ah-api-generator": "^4.0.12",
+    "ah-api-type": "^3.0.7",
+    "lodash": "^4.17.21"
+  }
+}
