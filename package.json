@@ -5,10 +5,13 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
     "build": "tsc -p tsconfig.build.json --outDir dist",
-    "prepublish": "npm run ci && npm run build"
+    "release": "npm run ci && rm -rf dist/* && npm run build && release-it"
   },
   "peerDependencies": {
     "ah-server": ">=5.2.4"
