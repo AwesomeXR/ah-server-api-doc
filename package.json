@@ -1,6 +1,6 @@
 {
   "name": "ah-server-api-doc",
-  "version": "3.0.60",
+  "version": "3.0.61",
   "main": "dist/index.js",
   "files": [
     "dist"
